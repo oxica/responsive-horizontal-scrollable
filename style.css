@@ -50,13 +50,14 @@ section{
     color: var(--text-color);
     list-style: none;
     background: var(--third-color);
-    max-width: 800px;
+    /* max-width: 800px; */
     padding: 10px;
     white-space: nowrap;
     border-radius: 50px;
     box-shadow: var(--box-shadow);
     overflow-x: auto;
     user-select: none;
+    scroll-behavior: smooth;
 }
 
 .tab-menu::-webkit-scrollbar{
