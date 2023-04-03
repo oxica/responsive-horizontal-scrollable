@@ -60,6 +60,11 @@ section{
     scroll-behavior: smooth;
 }
 
+.tab-menu.dragging{
+    scroll-behavior: unset;
+    cursor: grab;
+}
+
 .tab-menu::-webkit-scrollbar{
     display: none;
 }
@@ -75,6 +80,10 @@ section{
     cursor: pointer;
     user-select: none;
     transition: 0.3s ease;
+}
+
+.tab-menu.dragging .tab-btn{
+    pointer-events: none;
 }
 
 .tab-btn:hover{
@@ -107,4 +116,64 @@ section{
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
 }
+
+.tab-content{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.tab{
+    max-width: 1100px;
+    padding: 15px 50px;
+}
+
+.tab .row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    gap: 30px;
+}
+
+.tab .img-card{
+    position: relative;
+    width: 450px;
+    max-width: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+
+.tab .img-card img{
+    width: 100%;
+}
+
+.right-column{
+    max-width: 800px;
+}
+
+.info .city, .info .description p{
+color: var(--text-color);
+margin-bottom: 10px;
+}
+
+.info .city{
+    font-size: 2em;
+}
+
+.country{
+    color: var(--third-color);
+    font-size: 5em;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: var(--text-shadow);
+}
+
+
 
